@@ -1,7 +1,7 @@
 import './App.css';
 import logo from './assets/images/ciclo2.png';
 import ChangingComponent from './components/LifeCycle';
-import ErrorHandler from './components/LifeCycle/error';
+import ErrorHandler from './components/LifeCycle/errorHandler';
 import ComponentWillUnmount from './components/UnMount';
 
 function App() {

@@ -24,10 +24,7 @@ class ChangingComponent extends React.Component {
         console.log('Component Did mount for update example!')  
     }  
 
-    changeState(){
-        if(this.state.cycle === "Update"){
-            throw new Error("Text was already Updated");
-        }  
+    changeState(){ 
         this.setState({cycle:"Update"});
     } 
 
@@ -35,7 +32,11 @@ class ChangingComponent extends React.Component {
         return true;  
     } 
 
-    componentDidUpdate(prevProps, prevState) {  
+    componentDidUpdate(prevProps, prevState) { 
+        
+        if(prevState.cycle === "Update"){
+            throw new Error("Text was already Updated");
+        }  
         console.log('Component Did UPDATE!')  
     }
 }
