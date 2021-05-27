@@ -1,22 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import logo from './assets/images/ciclo2.png';
+import ChangingComponent from './components/LifeCycle';
+import ErrorHandler from './components/LifeCycle/error';
+import ComponentWillUnmount from './components/UnMount';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <img src={logo} className="App-logo" alt="cycle"/>
+        <h1>Life Cycle</h1>
+        <h2>By Diana Villalvazo</h2>
+        <ErrorHandler>
+          <ChangingComponent />  
+        </ErrorHandler>  
+        <ComponentWillUnmount />             
       </header>
     </div>
   );
